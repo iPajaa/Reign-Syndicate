@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .status-banner {
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .status-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .status-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .status-item span {
+            font-size: 1rem;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+        }
+
+        .status-indicator .bar {
+            width: 200px;
+            height: 10px;
+            background-color: #00ff00;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Reign.gg</div>
+        <div class="status-banner">Service Under Maintenance</div>
+
+        <div class="status-section">
+            <h3>Servers</h3>
+            <div class="status-item">
+                <span>Uptime over the past 90 days</span>
+                <div class="status-indicator">
+                    <div class="bar"></div>
+                    <span>100.0% uptime</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <h3>Products</h3>
+            <div class="status-item">
+                <span>League of Legends</span>
+                <span style="color: #00ff00;">Operational</span>
+            </div>
+            <div class="status-item">
+                <span>Counter-Strike 2</span>
+                <span style="color: #00ff00;">Operational</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 klar.gg. All rights reserved.
+    </div>
+</body>
+</html>
