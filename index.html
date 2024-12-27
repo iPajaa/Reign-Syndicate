@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reign.gg</title>
+    <title>Klar.gg Inspired Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -13,11 +14,11 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: white;
-            background: #0d0d0d;
+            background-color: #0d0d0d;
             line-height: 1.6;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         header {
@@ -25,18 +26,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: rgba(0, 0, 0, 0.7);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            z-index: 10;
-            position: relative;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .logo {
             font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #00d4ff;
-            text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+            font-weight: 700;
+            color: #007bff;
         }
 
         .nav-links {
@@ -52,94 +52,106 @@
             text-decoration: none;
             color: white;
             font-size: 1rem;
+            font-weight: 400;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #00d4ff;
+            color: #007bff;
         }
 
         .cta-button {
             padding: 10px 20px;
-            background-color: #00d4ff;
+            background: linear-gradient(45deg, #007bff, #0056b3);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
             font-size: 1rem;
-            transition: box-shadow 0.3s, transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .cta-button:hover {
-            box-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
         }
 
         .hero {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            text-align: center;
+            justify-content: space-between;
             padding: 50px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)), url('background.jpg') no-repeat center center/cover;
             height: 100vh;
             position: relative;
-            z-index: 2;
         }
 
         .hero-content {
-            max-width: 800px;
-            z-index: 3;
+            max-width: 600px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #d1d1d1;
+            font-weight: 300;
+        }
+
+        .hero .cta-button {
+            font-size: 1.2rem;
         }
 
         .hero img {
-            max-width: 800px;
-            border-radius: 15px;
-            margin-top: 30px;
-            z-index: 3;
+            max-width: 1200px;
+            border-radius: 10px;
+            animation: slideIn 2s ease-in-out;
         }
 
         footer {
             text-align: center;
             padding: 20px;
             background: rgba(0, 0, 0, 0.9);
-            color: #bbb;
-            z-index: 10;
-            position: relative;
         }
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            top: 0;
-            left: 0;
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-
     <header>
-        <div class="logo">Reign.gg</div>
+        <div class="logo">KLAR.GG</div>
         <ul class="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#products">Products</a></li>
+            <li><a href="#forum">Forum</a></li>
             <li><a href="#status">Status</a></li>
-            <li><a href="#telegram">Discord</a></li>
+            <li><a href="#telegram">Telegram</a></li>
         </ul>
         <button class="cta-button">Buy Now</button>
     </header>
@@ -149,118 +161,12 @@
             <h1>Undetectable. Powerful. Affordable.</h1>
             <p>Discover the true art of gaming and unlock endless enjoyment for an unparalleled experience!</p>
             <button class="cta-button">Acquire and Buy</button>
-            <img src="pngegg.png" alt="Hero Image">
         </div>
+        <img src="pngegg.png" alt="Soldier Image">
     </section>
 
     <footer>
-        <p>&copy; 2024 REIGN.GG. All rights reserved.</p>
+        <p>&copy; 2024 KLAR.GG. All rights reserved.</p>
     </footer>
-
-    <!-- Include particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        /* Initialize particles.js */
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 120,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: { value: "#00d4ff" },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#00d4ff",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
-            },
-            retina_detect: true
-        });
-    </script>
 </body>
 </html>
