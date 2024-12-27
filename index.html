@@ -166,6 +166,64 @@
             left: 0;
             z-index: 0;
         }
+
+        section {
+            padding: 50px;
+        }
+
+        #features {
+            padding: 80px;
+            background: linear-gradient(to bottom, #0b0b12, #1a1a28);
+        }
+
+        #features h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        #features div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
@@ -189,6 +247,41 @@
             <button class="cta-button">Acquire and Buy</button>
         </div>
         <img src="pngegg.png" alt="Soldier Image">
+    </section>
+
+    <section id="features">
+        <h2>Our Features</h2>
+        <div>
+            <div class="feature-card">
+                <img src="icon1.png" alt="Game Detection Icon">
+                <h3>Automatic Game Detection</h3>
+                <p>Reign.gg automatically detects your launched game and securely injects the cheat, providing a seamless and safe gaming experience.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="icon2.png" alt="HWID Spoofer Icon">
+                <h3>Built-In HWID Spoofer</h3>
+                <p>An HWID spoofer alters your device's unique hardware ID, helping bypass bans and allowing continued gameplay.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="icon3.png" alt="Config Icon">
+                <h3>Save and Share Configs</h3>
+                <p>Save, share, and download custom cheat configurations for personalization.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="icon4.png" alt="Overlay Icon">
+                <h3>In-Game Overlay</h3>
+                <p>The Reign.gg overlay allows easy mod activation without leaving the game.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="icon5.png" alt="Ease of Use Icon">
+                <h3>Easy One-Click Start</h3>
+                <p>No need to worry about version conflicts or constant updates. Our mods work flawlessly.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
